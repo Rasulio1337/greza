@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты</title>
+    <link rel="stylesheet" href="style/contact.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html" target="_blank" rel="noopener noreferrer"></a>
+                <a href="index.html"><img src="image/logo.png" alt="Греза" /></a>
+            </div>
+            <nav class="nav-menu">
+                <a href="about.html">О ЦИРКЕ</a>
+                <a href="afisha.html">АФИША</a>
+                <a href="feedback.html">ОТЗЫВЫ</a>
+                <a href="contact.html">КОНТАКТЫ</a>
+            </nav>
+            <div class="contact-info">
+                <span class="phone">📞 +7 905 723 87 70</span>
+                <div class="social-icons">
+                    <a href="https://vk.com/feed"><img src="image/vk.png" alt="VK"></a>
+                    <a href="https://t.me/fedyabooker"><img src="image/telega.png" alt="Telegram"></a>
+                    <a href="https://ok.ru/"><img src="image/ok.png" alt="OK"></a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="main-content">
+        <div class="container">
+            <nav class="breadcrumbs">
+                <a href="index.html">Главная</a> / <span>Контакты</span>
+            </nav>
+            <h1 class="title">Контакты</h1>
+            <section class="contacts">
+                <div class="contact-item">
+                    <p>
+                        <span class="icon">📞</span>
+                        Номер администрации:
+                        <strong>+7 (905) 723 87 70</strong>
+                    </p>
+                    <p>Также, можно связаться с нами в социальных сетях:</p>
+                    <div class="social-icons">
+                        <a href="https://vk.com/feed"><img src="image/vk.png" alt="VK"></a>
+                    <a href="https://t.me/fedyabooker"><img src="image/telega.png" alt="Telegram"></a>
+                    <a href="https://ok.ru/"><img src="image/ok.png" alt="OK"></a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <p>
+                        <span class="icon">✉️</span>
+                        Email:
+                        <strong>grezacircus@gmail.com</strong>
+                    </p>
+                    <p>
+                        <span class="icon">📍</span>
+                        Адрес офиса:
+                        <strong>г. Астрахань, Ленинский район, Красноармейская, 4</strong>
+                    </p>
+                </div>
+            </section>
+            <h1 class="title">Остались вопросы?</h1> 
+            <div class="content">
+                <p>
+                Для этого заполните форму ниже:  
+                </p>
+                </div>
+                <div class="form-container">
+                    <form>
+                        <label for="name">Ваше имя *</label>
+                        <input type="text" id="name" placeholder="Введите ваше имя" required>
+            
+                        <label for="city">Город *</label>
+                        <input type="text" id="city" placeholder="Введите ваш город" required>
+            
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" placeholder="Введите ваш email" required>
+            
+                        <label for="phone">Ваш номер телефона *</label>
+                        <input type="tel" id="phone" placeholder="Введите ваш телефон" required>
+            
+                        <label for="question">Ваш вопрос *</label>
+                        <textarea id="question" placeholder="Введите ваш вопрос" required></textarea>
+            
+                        <div class="checkbox-label">
+                            <input type="checkbox" id="agreement" required>
+                            <label for="agreement">Даю согласие на обработку персональных данных</label>
+                        </div>
+            
+                        <button type="submit">Задать вопрос</button>
+                    </form>
+                </div>
+                <div id="modal" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h3>Ожидайте ответа!</h3>
+                        <button id="close-button" class="close-button">Закрыть</button>
+                    </div>
+                </div>
+                <h1 class="title">FAQ</h1> 
+                <div class="accordion">
+                    <div class="accordion-item">
+                      <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <span>Мне не пришел билет. Как его получить?</span>
+                        <span class="accordion-icon">▼</span>
+                      </div>
+                      <div class="accordion-content">
+                        <p>
+                          Сразу после оплаты, билет автоматически отправляется на указанную вами электронную почту. Если билета в почте нет – проверьте папку “Спам”. Если нет и в спаме – вам необходимо написать нашему менеджеру следующую информацию:
+                        </p>
+                        <ul>
+                          <li>ФИО, которые вы указали при приобретении билета,</li>
+                          <li>город, время представления,</li>
+                          <li>и скриншот чека.</li>
+                        </ul>
+                      </div>
+                    </div>
+                </div>
+                <div class="accordion">
+                    <div class="accordion-item">
+                      <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <span>Как произвести возврат купленного билета?</span>
+                        <span class="accordion-icon">▼</span>
+                      </div>
+                      <div class="accordion-content">
+                        <p>
+                            В соответствии с правилами, в случае если Покупатель обратился за возвратом:
+                        </p>
+                        <ul>
+                          <li>В день мероприятия – возврат не осуществляется.</li>
+                          <li>от 1 до 3 дней до начала мероприятия – возвращается только 70% от номинальной стоимости билетов.</li>
+                          <li>за 3 дня и более до мероприятия – возвращается 100% от номинальной стоимости билетов .</li>
+                        </ul>
+                        <p>Для оформления возврата вам необходимо написать нашему менеджеру, указав: ФИО, город, номер заказа (номер заказа указан в письме с билетами )<br>
+                        Если из нескольких билетов нужно вернуть лишь часть – укажите какие именно места необходимо вернуть.</p>
+                      </div>
+                    </div>
+                </div>
+                <div class="accordion">
+                    <div class="accordion-item">
+                      <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <span>Где можно приобрести билеты на шоу?</span>
+                        <span class="accordion-icon">▼</span>
+                      </div>
+                      <div class="accordion-content">
+                        <p>
+                            Зритель может приобрести билеты на мероприятия одним из следующих способов: 
+                        </p>
+                        <ul>
+                          <li>у официальных распространителей.</li>
+                          <li>на официальном сайте – можно оплатить банковской картой.</li>
+                          
+                        </ul>
+                      </div>
+                    </div> 
+                </div>
+                <div class="accordion">
+                    <div class="accordion-item">
+                      <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <span>Есть ли специальные детские билеты, когда цена уменьшена?</span>
+                        <span class="accordion-icon">▼</span>
+                      </div>
+                      <div class="accordion-content">
+                        <p>
+                            Нет. Детских билетов нет.
+                        </p>
+                      </div>
+                    </div>
+                    
+                </div>
+            </div>                
+        </div>
+    </main>
+    <script src="script/contact.js"></script>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <a href="index.html"><img src="image/logo.png" alt="Греза" /></a>
+            </div>
+            <div class="footer-info">
+                <p>Адрес: <strong>414052, г. Астрахань, Ленинский район, Красноармейская, 4</strong></p>
+                <p>Телефон: <strong>+7 (905) 723 87 70</strong></p>
+                <p>E-mail: <strong>grezacircus@gmail.com</strong></p>
+            </div>
+            <div class="footer-links">
+                <a href="about.html"><strong>О цирке</strong></a>
+                <a href="afisha.html"><strong>Афиша</strong></a>
+                <a href="feedback.html"><strong>Отзывы</strong></a>
+                <a href="contact.html"><strong>Контакты</strong></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Copyright © 2012–2024 Greza. Все права защищены.</p>
+        </div>
+    </footer>
+</body>
+</html>

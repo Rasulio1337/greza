@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Отзывы</title>
+    <link rel="stylesheet" href="style/feedback.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html" target="_blank" rel="noopener noreferrer"></a>
+                <a href="index.html"><img src="image/logo.png" alt="Греза" /></a>
+            </div>
+            <nav class="nav-menu">
+                <a href="about.html">О ЦИРКЕ</a>
+                <a href="afisha.html">АФИША</a>
+                <a href="feedback.html">ОТЗЫВЫ</a>
+                <a href="contact.html">КОНТАКТЫ</a>
+            </nav>
+            <div class="contact-info">
+                <span class="phone">📞 +7 905 723 87 70</span>
+                <div class="social-icons">
+                    <a href="https://vk.com/feed"><img src="image/vk.png" alt="VK"></a>
+                    <a href="https://t.me/fedyabooker"><img src="image/telega.png" alt="Telegram"></a>
+                    <a href="https://ok.ru/"><img src="image/ok.png" alt="OK"></a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="main-content">
+        <div class="container">
+            <nav class="breadcrumbs">
+                <a href="index.html">Главная</a>  / <span>Отзывы</span>
+            </nav>
+            <h1 class="title">Отзывы</h1>
+            <div class="slider">
+                <button class="slider-btn prev-btn">‹</button>
+                <div class="slides">
+                    <div class="slide">
+                        <div class="slide-image">
+                            <img src="image/Глеб.jpg" alt="Отзыв 1">
+                        </div>
+                        <div class="slide-content">
+                            <h2>Глеб Орлов</h2>
+                            <p>Дата: 05.12.2024</p>
+                            <p>Замечательное шоу! Восхитительная атмосфера и невероятные номера. Обязательно приду снова!<br><br><strong>Взято с VK</strong></p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="slide-image">
+                            <img src="image/надежда.png" alt="Отзыв 2">
+                        </div>
+                        <div class="slide-content">
+                            <h2>Надежда Смирнова</h2>
+                            <p>Дата: 03.12.2024</p>
+                            <p>Дети в восторге! Артисты настоящие профессионалы. Очень рекомендую всем семьям.<br><br><strong>Взято с VK</strong></p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="slide-image">
+                            <img src="image/Мария.jpg" alt="Отзыв 3">
+                        </div>
+                        <div class="slide-content">
+                            <h2>Мария Кузнецова</h2>
+                            <p>Дата: 01.12.2024</p>
+                            <p>Лучший цирк, который я посещала. Организация на высшем уровне, артисты молодцы!<br><br><strong>Взято с OK</strong></p>
+                        </div>
+                    </div>
+                </div>
+                <button class="slider-btn next-btn">›</button>
+                <div class="dots">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+            <br>
+            <h1 class="title">Хотите оставить отзыв?</h1> 
+            <div class="content">
+                <p>
+                Для этого заполните форму ниже:  
+                </p>
+                </div>
+                <div class="form-container">
+
+                    <form id="feedback-form">
+                        <div class="form-group">
+                            <label for="name">Ваше имя *</label>
+                            <input type="text" id="name" name="name" required placeholder="Введите ваше имя">
+                        </div>
+                        <div class="form-group">
+                            <label for="city">Город *</label>
+                            <input type="text" id="city" name="city" required placeholder="Введите ваш город">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required placeholder="Введите ваш email">
+                        </div>
+                        <div class="form-group">
+                            <label for="review">Ваш отзыв *</label>
+                            <textarea id="review" name="review" required placeholder="Напишите ваш отзыв" rows="4"></textarea>
+                        </div>
+                        <div class="checkbox-label">
+                            <input type="checkbox" id="agreement" required>
+                            <label for="agreement"><strong>Даю согласие на обработку персональных данных</strong></label>
+                        </div>
+                        <button type="submit" class="submit-button">Оставить отзыв</button>
+                    </form>
+                </div>
+            
+                <!-- Модальное окно -->
+                <div id="thank-you-modal" class="modal">
+                    <div class="modal-content">
+                        <h3>Спасибо за отзыв!</h3>
+                        <button class="close-modal" id="close-modal">Закрыть</button>
+                    </div>
+                </div>
+            </div>
+    <script src="script/feedback.js"></script>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <a href="index.html"><img src="image/logo.png" alt="Греза" /></a>
+            </div>
+            <div class="footer-info">
+                <p>Адрес: <strong>414052, г. Астрахань, Ленинский район, Красноармейская, 4</strong></p>
+                <p>Телефон: <strong>+7 (905) 723 87 70</strong></p>
+                <p>E-mail: <strong>grezacircus@gmail.com</strong></p>
+            </div>
+            <div class="footer-links">
+                <a href="about.html"><strong>О цирке</strong></a>
+                    <a href="afisha.html"><strong>Афиша</strong></a>
+                    <a href="feedback.html"><strong>Отзывы</strong></a>
+                    <a href="contact.html"><strong>Контакты</strong></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Copyright © 2012–2024 Greza. Все права защищены.</p>
+        </div>
+    </footer>  
+</main>
+</body>
+</html>

@@ -1,0 +1,418 @@
+/* Основные стили для шапки сайта */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #ddd9d9;
+}
+
+.header {
+    background-color: #ccc8c8;
+    padding: 10px 0;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo img {
+    max-height: 120px;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    flex-grow: 1;
+    margin: 0;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #b22222;
+    font-weight: bold;
+    font-size: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: #8b0000;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.contact-info {
+    text-align: right;
+    font-size: 14px;
+}
+
+.phone {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.social-icons img {
+    width: 32px;
+    height: 31.5px;
+    display: inline-block;
+    border-radius: 50%;
+}
+
+/* Стили для основного контента */
+.main-content {
+    margin: 20px auto;
+    max-width: 1200px;
+    padding: 0 20px;
+}
+
+.banner {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 300px; /* Уменьшение высоты баннера */
+    
+}
+
+.banner-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: brightness(50%)
+}
+
+.banner-text {
+    position: absolute;
+    bottom: 50px;
+    left: 470px;
+    color: white;
+    font-size: 28px; /* Уменьшение размера текста */
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    text-align: center;
+}
+
+.info-blocks {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.info-block {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+}
+
+.info-block h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 20px 30px;
+    font-size: 16px;
+    color: white;
+    background-color: #b22222;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #8b0000;
+}
+
+.info-block {
+    position: relative;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    text-align: center;
+    padding: 10px 15px; /* Уменьшаем внутренние отступы */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* Уменьшаем разрыв между элементами */
+    min-height: 100px; /* Уменьшаем минимальную высоту блока */
+}
+
+
+.info-image {
+    height: 150px; /* Уменьшенная высота */
+    width: auto;  /* Пропорциональная ширина */
+    margin: 0 auto;
+    object-fit: contain; /* Убедимся, что изображение вписывается в заданные размеры */
+    border-radius: 10px; /* Добавим скругление для гармонии дизайна */
+}
+
+.show-details {
+    text-align: center;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.city-title {
+    font-size: 36px;
+    color: #b22222;
+    margin-bottom: 10px;
+}
+
+.dates {
+    font-size: 26px;
+    color: rgba(53, 55, 114, 1);
+    margin-bottom: 20px;
+}
+
+.description {
+    font-size: 20px;
+    line-height: 1.6;
+    color: #000000;
+    margin-bottom: 30px;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.card {
+    background-color: rgba(215, 215, 215, 1);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    overflow: hidden;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    min-height: 400px; /* Увеличение минимальной высоты карточки */
+}
+.card-image {
+    width: 100%;
+    height: 310px; /* Увеличение высоты изображения */
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+    filter: brightness(80%);
+}
+
+.card h3 {
+    font-size: 26px;
+    margin: 15px 0; /* Увеличение отступов для гармонии */
+    color: #000000;
+}
+
+.card-label {
+    font-size: 20px;
+    color: #000000;
+}
+
+.cta-button {
+    padding: 20px 50px;
+    font-size: 16px;
+    color: white;
+    background-color: #b22222;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button1 {
+    padding: 20px 80px;
+    font-size: 16px;
+    color: white;
+    background-color: #b22222;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+.cta-button:hover {
+    background-color: #8b0000;
+}
+.gift-section {
+    background-color: #0c0d13; /* Цвет фона, приближенный к фону на скриншоте */
+    background-image: url('image/задний фон.png'); /* Замените на путь к изображению с подарками */
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px; /* Закругление краев */
+    padding: 20px;
+    margin: 40px auto;
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.gift-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+}
+
+.gift-text {
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    flex: 1;
+}
+
+.gift-button {
+    background-color: #b22222;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 25px 45px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.gift-button:hover {
+    background-color: #8b0000;
+    transform: scale(1.05);
+}
+
+.why {
+    font-size:  27px;
+}
+.features-section {
+    margin: 40px auto;
+    padding: 20px;
+    max-width: 1200px;
+    text-align: center;
+}
+
+.features-title {
+    font-size: 28px;
+    margin-bottom: 30px;
+    font-weight: bold;
+    color: #333;
+}
+
+.features-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Три карточки в ряд */
+    gap: 30px; /* Расстояние между карточками, как на скриншоте */
+    justify-items: center;
+    align-items: stretch;
+    padding: 20px; /* Добавляем отступы вокруг секции */
+}
+
+.feature-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #fff; /* Белый фон для контраста */
+    padding: 20px;
+    border-radius: 10px; /* Скругленные углы */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Тень для глубины */
+    height: 280px; /* Фиксированная высота */
+}
+
+.feature-item img {
+    width: 70px; /* Иконки по размеру, как на скриншоте */
+    height: 70px;
+    margin-bottom: 15px;
+}
+
+.feature-item h3 {
+    font-size: 24px;
+    color: #000000;
+    margin: 10px 0;
+}
+
+.feature-item p {
+    font-size: 14px;
+    color: #aa0000;
+    line-height: 1.6;
+}
+.footer {
+    background-color: #d0cac8; /* Цвет фона, как на скриншоте */
+    padding: 20px 0;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-logo img {
+    max-height: 120px; /* Устанавливаем высоту логотипа */
+}
+
+.footer-info {
+    text-align: left;
+    max-width: 300px;
+    line-height: 1.5;
+    font-size: 15px;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Расстояние между ссылками */
+    text-align: right;
+    font-size: 15px;
+}
+
+.footer-links a {
+    color: #000;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    border-top: 1px solid #000;
+    margin-top: 20px;
+    padding-top: 10px;
+    font-size: 12px;
+    color: #555;
+}
+

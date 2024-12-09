@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Цирк "Грёза" - Сертификаты</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #b22222;
+            color: #fff;
+            text-align: center;
+            padding: 20px 10px;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 15px;
+        }
+
+        .certificate {
+            display: flex;
+            align-items: center;
+            background-color: #fff;
+            border: 2px solid #000000;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .certificate img {
+            max-width: 270px;
+            height: 200px;
+            margin-right: 20px;
+            border-radius: 10px;
+        }
+
+        .certificate-content {
+            flex: 1;
+            margin-left: 50px;
+        }
+
+        .certificate-content h2 {
+            color: #b22222;
+        }
+
+        .certificate-content p {
+            font-size: 18px;
+            margin: 10px 0;
+            
+        }
+
+        .certificate-content button {
+            margin-top: 10px;
+            background-color: #b22222;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .certificate-content button:hover {
+            background-color: #0b9f28;
+        }
+
+        footer {
+            background-color: #b22222;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Модальное окно */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .modal-content input {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .modal-content button {
+            background-color: #b22222;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 10px;
+        }
+
+        .modal-content button:hover {
+            background-color: #0b9f28;
+        }
+
+        .success img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Сертификаты в цирк "Грёза"</h1>
+        <p>Подарите незабываемые впечатления вашим близким!</p>
+    </header>
+
+    <div class="container">
+        <div class="certificate">
+            <img src="image/сертификат1.png" alt="Сертификат 1000 рублей">
+            <div class="certificate-content">
+                <h2>Сертификат на 1000 рублей</h2>
+                <p>Подарите небольшую радость, доступную каждому!</p>
+                <button onclick="openModal()">Купить</button>
+            </div>
+        </div>
+
+        <div class="certificate">
+            <img src="image/сертификат2.jpg" alt="Сертификат 2500 рублей">
+            <div class="certificate-content">
+                <h2>Сертификат на 2500 рублей</h2>
+                <p>Идеальный выбор для семьи или группы друзей!</p>
+                <button onclick="openModal()">Купить</button>
+            </div>
+        </div>
+
+        <div class="certificate">
+            <img src="image/сертификат3.png" alt="Сертификат 4000 рублей">
+            <div class="certificate-content">
+                <h2>Сертификат на 4000 рублей</h2>
+                <p>Подарите максимум удовольствия с премиальным сертификатом!</p>
+                <button onclick="openModal()">Купить</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальное окно для ввода данных -->
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <h3>Введите ваши данные</h3>
+            <input type="text" id="phone" placeholder="Номер телефона" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <button onclick="submitForm()">Подтвердить</button>
+            <button onclick="closeModal()">Закрыть</button>
+        </div>
+    </div>
+
+    <!-- Модальное окно с подтверждением -->
+    <div class="modal" id="successModal">
+        <div class="modal-content success">
+            <h3>Просканируйте для оплаты!</h3>
+            <img src="image/qr.png" alt="Сертификат">
+            <button onclick="closeModal()">Закрыть</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Цирк "Грёза". Все права защищены.</p>
+    </footer>
+
+    <script>
+        function openModal() {
+            document.getElementById('modal').style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('modal').style.display = 'none';
+            document.getElementById('successModal').style.display = 'none';
+        }
+
+        function submitForm() {
+            const phone = document.getElementById('phone').value;
+            const email = document.getElementById('email').value;
+
+            if (phone && email) {
+                document.getElementById('modal').style.display = 'none';
+                document.getElementById('successModal').style.display = 'flex';
+            } else {
+                alert('Пожалуйста, заполните все поля!');
+            }
+        }
+    </script>
+</body>
+</html>
